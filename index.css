@@ -1,5 +1,5 @@
 /* ===== Basic page styles (simple) ===== */
-* { box-sizing: border-box; }
+* { box-sizing: border-box; } /*  to include padding/border in element's total width/height and make calculations easier ( suggested by chatgpt )) */
 
 /*color palette and blur levels were trial and error adjusted for best look and also using chatgpt and color pallete from https://colorhunt.co*/
 
