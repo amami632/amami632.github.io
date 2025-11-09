@@ -16,7 +16,8 @@ showPanel('#about');
 const IMAGES = [
   'https://images.unsplash.com/photo-1522199755839-a2bacb67c546?q=80&w=1200&auto=format&fit=crop',
   'https://images.unsplash.com/photo-1550439062-609e1531270e?q=80&w=1200&auto=format&fit=crop',
-  'https://images.unsplash.com/photo-1587829741301-dc798b83add3?q=80&w=1200&auto=format&fit=crop'
+  'https://images.unsplash.com/photo-1587829741301-dc798b83add3?q=80&w=1200&auto=format&fit=crop',
+  'pdp.jpg',
 ];
 let gi = 0;
 const gImg = document.getElementById('g-img');
@@ -51,6 +52,8 @@ function update(){
     d.x += d.vx; d.y += d.vy;
     if(d.x < 0 || d.x > canvas.width) d.vx *= -1;
     if(d.y < 0 || d.y > canvas.height) d.vy *= -1;
+
+    // adds the bouncing effect when teh dots hit the edges
   }
 }
 function draw(){
@@ -59,7 +62,6 @@ function draw(){
   // soft grid
   ctx.strokeStyle = 'rgba(255,255,255,0.05)';
   ctx.lineWidth = 1;
-  for(let x=0; x<canvas.width; x+=40){ ctx.beginPath(); ctx.moveTo(x,0); ctx.lineTo(x,canvas.height); ctx.stroke(); }
 
   // connect nearby dots ( definetly generated with chatgpt help :) ) ( idea from Network realm resembling network handover procedure  :) )
   for(let i=0;i<dots.length;i++){
@@ -128,6 +130,8 @@ const BLOBS = Array.from({length: 5}).map(() => ({
   vy: (Math.random()*0.6 - 0.3)
 }));
 
+// definitely generated with chatgpt help :) because I wanted a cool wrapping mechanism but I am not that good at math :)!
+
 function bgUpdate(){
   for(const b of BLOBS){
     b.x += b.vx; b.y += b.vy;
@@ -154,5 +158,5 @@ function bgDraw(){
 function bgLoop(){ bgUpdate(); bgDraw(); requestAnimationFrame(bgLoop); }
 requestAnimationFrame(bgLoop);
 
-/* Footer year */
+/* Footer dynamic year */
 document.getElementById('year').textContent = new Date().getFullYear();
