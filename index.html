@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Yassir Amami — Network & Telecom CV</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+<!-- background canvas -->
+<canvas id="bg" aria-hidden="true"></canvas>
+
+<!-- HEADER canvas -->
+<header class="container">
+  <canvas id="hero" aria-hidden="true"></canvas>
+</header>
+
+<main class="container grid">
+  <!-- LEFT -->
+  <aside class="card">
+    <div class="pad">
+      <img class="avatar" src="pdp.jpg" alt="Portrait">
+      <div class="name">Yassir Amami</div>
+      <div class="role">Network & Telecommunications student</div>
+      <p style="margin:8px 0 0">
+        Student focusing on IP networking, Linux, packet analysis and 5G fundamentals. I enjoy building small, reproducible labs and documenting what I learn.
+      </p>
+
+      <div class="contact" style="margin-top:10px">
+        <a href="tel:+33619939449">+33 6 19 93 94 49</a>
+        <a href="mailto:amamiyassir@gmail.com">Email</a>
+        <a href="#" target="_blank" rel="noreferrer">GitHub</a>
+      </div>
+    </div>
+  </aside>
+
+  <!-- RIGHT -->
+  <section class="card">
+    <!-- Tab buttons -->
+    <div class="tabs">
+      <button class="tab-btn active" data-target="#about">About</button>
+      <button class="tab-btn" data-target="#education">Education</button>
+      <button class="tab-btn" data-target="#projects">Projects</button>
+      <button class="tab-btn" data-target="#experience">Hands-On Experience</button>
+      <button class="tab-btn" data-target="#skills">Skills</button>
+      <button class="tab-btn" data-target="#gallery">Gallery</button>
+    </div>
+
+    <!-- Panels -->
+    <div class="pad">
+      <section id="about" class="tab-panel">
+        <h3>About me</h3>
+        <p>I work on hands-on networking: <strong>routing/switching basics</strong>, <strong>packet analysis</strong>, and <strong>Linux administration</strong>. Recent focus: small labs for VLANs, QoS, monitoring with Prometheus/Grafana, and 5G setups deployed on commodity servers.</p>
+        <ul>
+          <li>Based in Valbonne (Sophia Antipolis), France</li>
+          <li>Interests: IP networks, Wireshark, automation with Bash/Python, intro 5G</li>
+        </ul>
+      </section>
+
+      <section id="education" class="tab-panel" hidden>
+        <h3>Education</h3>
+        <ul>
+          <li><strong>PhD, Inria / Université Côte d’Azur</strong> (2024–2027). Topic: Monitoring 5G Networks.</li>
+          <li><strong>Master 2 (Double Degree)</strong> — Polytech Nice-Sophia / EUR DS4H (2023–2024).</li>
+          <li><strong>Engineering Cycle in Communications and Networks</strong> — ENSA Tanger (2021–2024).</li>
+          <li><strong>Preparatory Cycle</strong> — ENSA Tanger (2019–2021).</li>
+        </ul>
+      </section>
+
+      <section id="projects" class="tab-panel" hidden>
+        <h3>Projects</h3>
+
+        <article style="padding:10px 0; border-bottom:1px dashed var(--line)">
+          <h4>Home-Lab LAN with VLANs & Inter-VLAN Routing</h4>
+          <p>Designed a 3-VLAN topology using my home network (Users / IoT / Servers). Configured 802.1Q trunking and L3 routing; validated isolation and reachability.</p>
+          <div class="tags"><span class="tag">Packet Tracer</span><span class="tag">VLAN</span><span class="tag">802.1Q</span><span class="tag">Routing</span></div>
+        </article>
+
+        <article style="padding:10px 0; border-bottom:1px dashed var(--line)">
+          <h4>SDN QoS & Traffic Engineering (Mininet + Ryu)</h4>
+          <p>Programmed flow rules for per-class QoS and ECMP. Benchmarked latency/jitter/throughput under congestion and validated priority queues for voice vs bulk transfers.</p>
+          <div class="tags">
+            <span class="tag">SDN</span><span class="tag">Ryu</span><span class="tag">OpenFlow</span>
+            <span class="tag">QoS</span><span class="tag">Mininet</span>
+          </div>
+        </article>
+      
+        <article style="padding:10px 0; border-bottom:1px dashed var(--line)">
+          <h4>QUIC vs TCP — Loss & 0-RTT Performance</h4>
+          <p>Compared QUIC and TLS-over-TCP transfers with induced 1–5% loss and 20–80 ms latency. Analyzed handshake RTT, 0-RTT resumption success, and goodput. Captured and decoded QUIC in Wireshark.</p>
+          <div class="tags">
+            <span class="tag">QUIC</span><span class="tag">TLS</span><span class="tag">Wireshark</span>
+            <span class="tag">NetEm</span><span class="tag">Benchmarking</span>
+          </div>
+        </article>
+      
+        <article style="padding:10px 0; border-bottom:1px dashed var(--line)">
+          <h4>5G Core KPIs Dashboard (Simulation)</h4>
+          <p>Deployed Open5GS with UERANSIM UE(s). Exported registration/PDU setup latency and GTP-U throughput to Prometheus; built Grafana alerts for attach failures and bitrate thresholds.</p>
+          <div class="tags">
+            <span class="tag">Open5GS</span><span class="tag">UERANSIM</span>
+            <span class="tag">Prometheus</span><span class="tag">Grafana</span>
+            <span class="tag">GTP-U</span>
+          </div>
+        </article>
+
+        <article style="padding:10px 0">
+          <h4>5G Deployment Script for Commodity Servers and USRPs</h4>
+          <p>Created a script that runs different types of 5G infrastructures connected to simulated/real UE.</p>
+          <div class="tags"><span class="tag">Open5GS</span><span class="tag">UERANSIM</span><span class="tag">Linux</span><span class="tag">VMs</span></div>
+        </article>
+      </section>
+
+      <section id="experience" class="tab-panel" hidden>
+        <h3>Hands-On Experience</h3>
+      
+        <article style="padding:10px 0; border-bottom:1px dashed var(--line)">
+          <h4>Network Configuration & Troubleshooting Lab — University Project</h4>
+          <p><em>Feb 2025 – Apr 2025</em>. Built and <span title="past tense of troubleshoot">troubleshot</span> multi-VLAN and OSPF topologies on Cisco Packet Tracer and EVE-NG. Verified routing convergence and redundancy using virtual routers and switches.</p>
+          <div class="tags">
+            <span class="tag">VLAN</span><span class="tag">OSPF</span><span class="tag">Packet Tracer</span><span class="tag">EVE-NG</span>
+          </div>
+        </article>
+      
+        <article style="padding:10px 0; border-bottom:1px dashed var(--line)">
+          <h4>Internship – Local ISP Support (Simulated)</h4>
+          <p><em>Jun 2024 – Aug 2024</em>. Assisted in configuring customer CPE routers and monitoring bandwidth utilization using SNMP and NetFlow collectors. Documented fault cases and service restoration procedures.</p>
+          <div class="tags">
+            <span class="tag">SNMP</span><span class="tag">NetFlow</span><span class="tag">Router Config</span>
+          </div>
+        </article>
+      
+        <article style="padding:10px 0; border-bottom:1px dashed var(--line)">
+          <h4>Network Monitoring & Automation Practice</h4>
+          <p><em>2024</em>. Set up a small Prometheus + Grafana stack to monitor Linux hosts and simulated routers (CPU, interface errors, packet loss). Wrote Python scripts to parse JSON metrics and trigger alerts.</p>
+          <div class="tags">
+            <span class="tag">Prometheus</span><span class="tag">Grafana</span><span class="tag">Python</span><span class="tag">Automation</span>
+          </div>
+        </article>
+      
+        <article style="padding:10px 0">
+          <h4>Network Security & Firewall Rules</h4>
+          <p><em>2023</em>. Implemented NAT, ACLs, and simple intrusion-detection filters using iptables and pfSense. Validated rule impact with nmap scans and packet capture.</p>
+          <div class="tags">
+            <span class="tag">iptables</span><span class="tag">pfSense</span><span class="tag">Security</span><span class="tag">Firewall</span>
+          </div>
+        </article>
+      </section>
+
+      <section id="skills" class="tab-panel" hidden>
+        <h3>Skills</h3>
+        <div class="skill">
+          <h4>Networking (TCP/IP, DNS, DHCP, NAT, VLANs, OSPF basics) <span>80%</span></h4>
+          <div class="meter"><div class="bar" style="--value:80%"></div></div>
+        </div>
+        <div class="skill">
+          <h4>Tools (Wireshark, iperf3, tcpdump, nmap) <span>80%</span></h4>
+          <div class="meter"><div class="bar" style="--value:80%"></div></div>
+        </div>
+        <div class="skill">
+          <h4>Linux (Debian/Ubuntu, Bash, iproute2) <span>75%</span></h4>
+          <div class="meter"><div class="bar" style="--value:75%"></div></div>
+        </div>
+        <div class="skill">
+          <h4>Monitoring (Prometheus, Grafana basics) <span>70%</span></h4>
+          <div class="meter"><div class="bar" style="--value:70%"></div></div>
+        </div>
+        <div class="skill">
+          <h4>Virtualization (Docker, VMs; K8s intro) <span>65%</span></h4>
+          <div class="meter"><div class="bar" style="--value:65%"></div></div>
+        </div>
+        <div class="skill">
+          <h4>Scripting (Python, Bash) <span>70%</span></h4>
+          <div class="meter"><div class="bar" style="--value:70%"></div></div>
+        </div>
+      </section>
+
+      <section id="gallery" class="tab-panel" hidden>
+        <h3>Image Gallery</h3>
+        <div class="gallery">
+          <img id="g-img" src="" alt="Gallery image">
+          <div class="controls">
+            <button class="icon-btn" id="g-prev" aria-label="Previous">‹</button>
+            <button class="icon-btn" id="g-next" aria-label="Next">›</button>
+          </div>
+        </div>
+      </section>
+    </div>
+  </section>
+</main>
+
+<footer class="container">© <span id="year"></span> Yassir Amami</footer> <!--  year is passed through JS to keep it up to date. -->
+
+<script src="index.js" defer></script> <!-- JS script loaded after HTML parsing -->
+</body>
+</html>
