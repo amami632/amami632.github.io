@@ -32,6 +32,7 @@ Everything is done in pure HTML/CSS/JS, no external framework.
 ├── index.js      # Interactivity and canvas animations
 └── pdp.jpg       # Profile picture used in the CV
 
+```
 ---
 
 > **What I did for this project is build an interactive CV page using only HTML, CSS and JavaScript.**  
