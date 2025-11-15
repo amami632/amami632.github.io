@@ -35,11 +35,11 @@ Everything is done in pure HTML/CSS/JS, no external framework.
 ```
 ---
 
-> **What I did for this project is build an interactive CV page using only HTML, CSS and JavaScript.**  
-> The layout is a dark themed, two-column design: on the left there is my profile card with my photo and contact information, and on the right there is a tabbed interface with sections like About, Education, Projects, Experience, Skills and a small gallery.
->
-> On the JavaScript side, I implemented the tab system: when I click on a tab, I show its panel and hide the others by toggling the `hidden` attribute. In the Skills tab, I trigger small animations on the skill bars so they fill up smoothly.
->
-> I also added two canvas animations. The header canvas displays moving dots that bounce inside the rectangle and connect with lines when they are close, which gives a “network graph” effect behind my name and title. In the background, a full-screen canvas draws slow moving, blurry color blobs; this is blurred further with CSS to get a soft gradient glow behind the content.
->
-> Finally, I added a simple image gallery with previous/next buttons and an automatically updated year in the footer. Everything works in a standard browser without any framework.
+**What I did for this project is build an interactive CV page using only HTML, CSS and JavaScript.**  
+ The layout is a dark themed, two-column design: on the left there is my profile card with my photo and contact information, and on the right there is a tabbed interface with sections like About, Education, Projects, Experience, Skills and a small gallery.
+
+ On the JavaScript side, I implemented the tab system: when I click on a tab, I show its panel and hide the others by toggling the `hidden` attribute. In the Skills tab, I trigger small animations on the skill bars so they fill up smoothly.
+
+ I also added two canvas animations. The header canvas displays moving dots that bounce inside the rectangle and connect with lines when they are close, which gives a “network graph” effect behind my name and title. In the background, a full-screen canvas draws slow moving, blurry color blobs; this is blurred further with CSS to get a soft gradient glow behind the content.
+
+ Finally, I added a simple image gallery with previous/next buttons and an automatically updated year in the footer. Everything works in a standard browser without any framework.
