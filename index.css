@@ -11,7 +11,7 @@ body {
 }
 
 img { max-width: 100%; display: block; }
-a { color: inherit; text-decoration: none; }
+a { color: inherit; text-decoration: none; } 
 
 #bg {
   position: fixed;
